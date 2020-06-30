@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H8E-Gh-Vno">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5iQ-gI-zsZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -116,11 +117,44 @@
             </objects>
             <point key="canvasLocation" x="1766.6666666666667" y="119.86607142857142"/>
         </scene>
+        <!--Люди на карте-->
+        <scene sceneID="M7I-Gt-WLc">
+            <objects>
+                <viewController id="Kac-Uf-lDl" customClass="PeoplesOnMapViewController" customModule="TestAppForPumpit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KL4-D1-xOq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iH8-bN-QV2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iH8-bN-QV2" firstAttribute="trailing" secondItem="F0u-h9-VYN" secondAttribute="trailing" id="Vbu-Yd-E1I"/>
+                            <constraint firstItem="iH8-bN-QV2" firstAttribute="top" secondItem="F0u-h9-VYN" secondAttribute="top" id="dWg-VP-9Bv"/>
+                            <constraint firstAttribute="bottom" secondItem="iH8-bN-QV2" secondAttribute="bottom" id="rbp-f0-3j9"/>
+                            <constraint firstItem="iH8-bN-QV2" firstAttribute="leading" secondItem="F0u-h9-VYN" secondAttribute="leading" id="yn3-6N-A14"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F0u-h9-VYN"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Люди на карте" id="NwZ-if-ygk">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="wRA-eg-zhK"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="iH8-bN-QV2" id="lHL-ys-G6T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C4F-Qe-rE9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1766.6666666666667" y="868.52678571428567"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="eox-vR-24Y">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H8E-Gh-Vno" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="eid-pM-MEY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9F7-ZI-oaI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -133,6 +167,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZp-0n-YrB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="856.52173913043487" y="119.86607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vlL-uO-Ou3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5iQ-gI-zsZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9dO-w7-QDa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kac-Uf-lDl" kind="relationship" relationship="rootViewController" id="ABG-dh-311"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0nd-fy-NeV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="869"/>
         </scene>
     </scenes>
     <resources>

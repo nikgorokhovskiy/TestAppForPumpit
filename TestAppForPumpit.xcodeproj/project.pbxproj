@@ -16,6 +16,8 @@
 		844A4EFD24AA306B00411BC2 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A4EFC24AA306B00411BC2 /* CustomTableViewCell.swift */; };
 		844A4EFF24AA559000411BC2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A4EFE24AA559000411BC2 /* User.swift */; };
 		844A4F0224AA5AD900411BC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844A4F0124AA5AD900411BC2 /* GoogleService-Info.plist */; };
+		84740BC724AB5DE40098628D /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84740BC624AB5DE40098628D /* LocationService.swift */; };
+		84740BC924AB5F5E0098628D /* PeoplesOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84740BC824AB5F5E0098628D /* PeoplesOnMapViewController.swift */; };
 		84FA6F9A24AB05D600C82A6E /* Peoples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA6F9924AB05D600C82A6E /* Peoples.swift */; };
 		84FA6F9C24AB104200C82A6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84FA6F9B24AB104200C82A6E /* Main.storyboard */; };
 		84FA6F9E24AB1BC800C82A6E /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA6F9D24AB1BC800C82A6E /* PeopleTableViewController.swift */; };
@@ -50,6 +52,9 @@
 		844A4EFC24AA306B00411BC2 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		844A4EFE24AA559000411BC2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		844A4F0124AA5AD900411BC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84740BC624AB5DE40098628D /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		84740BC824AB5F5E0098628D /* PeoplesOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplesOnMapViewController.swift; sourceTree = "<group>"; };
+		84740BCC24AB95810098628D /* Ekaterinburg, Russia.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Ekaterinburg, Russia.gpx"; sourceTree = "<group>"; };
 		84FA6F9924AB05D600C82A6E /* Peoples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peoples.swift; sourceTree = "<group>"; };
 		84FA6F9B24AB104200C82A6E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		84FA6F9D24AB1BC800C82A6E /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
@@ -114,11 +119,13 @@
 				844A4ED824AA115000411BC2 /* SceneDelegate.swift */,
 				84FA6FA124AB3E8600C82A6E /* Services */,
 				844A4EFA24AA2EE600411BC2 /* PeopleScreen */,
+				84740BCA24AB5F620098628D /* PeoplesOnMapScreen */,
 				84FA6F9B24AB104200C82A6E /* Main.storyboard */,
 				844A4EDF24AA115700411BC2 /* Assets.xcassets */,
 				844A4EE124AA115700411BC2 /* LaunchScreen.storyboard */,
 				844A4EE424AA115700411BC2 /* Info.plist */,
 				844A4F0124AA5AD900411BC2 /* GoogleService-Info.plist */,
+				84740BCC24AB95810098628D /* Ekaterinburg, Russia.gpx */,
 			);
 			path = TestAppForPumpit;
 			sourceTree = "<group>";
@@ -159,10 +166,27 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		84740BCA24AB5F620098628D /* PeoplesOnMapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				84740BCB24AB5F7A0098628D /* View */,
+			);
+			path = PeoplesOnMapScreen;
+			sourceTree = "<group>";
+		};
+		84740BCB24AB5F7A0098628D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84740BC824AB5F5E0098628D /* PeoplesOnMapViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		84FA6FA124AB3E8600C82A6E /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				84FA6F9F24AB3E7F00C82A6E /* ImageService.swift */,
+				84740BC624AB5DE40098628D /* LocationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -349,9 +373,11 @@
 			files = (
 				844A4ED724AA115000411BC2 /* AppDelegate.swift in Sources */,
 				84FA6F9E24AB1BC800C82A6E /* PeopleTableViewController.swift in Sources */,
+				84740BC724AB5DE40098628D /* LocationService.swift in Sources */,
 				844A4EFD24AA306B00411BC2 /* CustomTableViewCell.swift in Sources */,
 				844A4EFF24AA559000411BC2 /* User.swift in Sources */,
 				84FA6F9A24AB05D600C82A6E /* Peoples.swift in Sources */,
+				84740BC924AB5F5E0098628D /* PeoplesOnMapViewController.swift in Sources */,
 				844A4ED924AA115000411BC2 /* SceneDelegate.swift in Sources */,
 				84FA6FA024AB3E8000C82A6E /* ImageService.swift in Sources */,
 			);
