@@ -139,7 +139,11 @@
                         <viewLayoutGuide key="safeArea" id="F0u-h9-VYN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Люди на карте" id="NwZ-if-ygk">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="wRA-eg-zhK"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="wRA-eg-zhK">
+                            <connections>
+                                <segue destination="H8E-Gh-Vno" kind="show" id="Obb-gC-GK2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="iH8-bN-QV2" id="lHL-ys-G6T"/>

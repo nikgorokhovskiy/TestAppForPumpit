@@ -1,0 +1,81 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "latitude": "56.835079",
+        "longitude": "60.609401",
+        "id": "0004",
+        "name": "Shapard",
+        "batteryLevel": "1",
+        "photo": "https://firebasestorage.googleapis.com/v0/b/testappforpumpit.appspot.com/o/uid0%2FCommander_Shepard.jpg?alt=media&token=bc321586-7d6b-4af2-909c-f4c1f7397b89",
+        "status": "Human"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            60.602498,
+            56.831260
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "latitude": "56.839197",
+        "longitude": "60.608892",
+        "id": "0002",
+        "name": "Garrus",
+        "batteryLevel": "0.36",
+        "photo": "https://firebasestorage.googleapis.com/v0/b/testappforpumpit.appspot.com/o/uid1%2FGarrus.jpg?alt=media&token=576fba1e-437e-4e0e-a997-21e096ac09ac",
+        "status": "Turian"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            60.608892,
+            56.839197
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "latitude": "56.843023",
+        "longitude": "60.595074",
+        "id": "0003",
+        "name": "Suzi",
+        "batteryLevel": "0.23",
+        "photo": "https://firebasestorage.googleapis.com/v0/b/testappforpumpit.appspot.com/o/uid2%2FSuzi.png?alt=media&token=8bba285c-264e-4de4-a597-7339880adade",
+        "status": "Synthetic"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            60.595074,
+            56.843023
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "latitude": "56.835065",
+        "longitude": "60.611339",
+        "id": "0004",
+        "name": "Liara",
+        "batteryLevel": "0.04",
+        "photo": "https://firebasestorage.googleapis.com/v0/b/testappforpumpit.appspot.com/o/uid3%2FLiara.jpg?alt=media&token=8c1b6c82-57b1-4ebd-a805-cf51d389ea69",
+        "status": "Asary"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+            60.611339,
+            56.835065
+        ]
+      }
+    }
+  ]
+}

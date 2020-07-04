@@ -9,19 +9,30 @@
 import UIKit
 import MapKit
 
-class PeoplesOnMapViewController: UIViewController {
+class PeoplesOnMapViewController: UIViewController, MKMapViewDelegate {
 
 //MARK: - IBOutlets
     @IBOutlet weak var mapView: MKMapView!
 
-//MARK: - Attributes
+    
+//MARK: - Properties
     private let locationManager = CLLocationManager()
+    private var mapPeoples: [MapPeoples] = []
     
 //MARK: - Body
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addAnnotations()
+        mapView.delegate = self
+        setupMapManager()
+        
+        mapView.register(MapMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+//        mapView.register(MapAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        loadInitialData()
+        mapView.addAnnotations(mapPeoples)
+        
+
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,37 +44,33 @@ class PeoplesOnMapViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    private func addAnnotations() {
+//Загрузка данных из MapData.geojson и добавление полученных данных в массив с метками mapPeople
+    private func loadInitialData() {
         
-        var peoples: [[String:String]] = []
-        var marks: [MKPointAnnotation] = []
-        
-        let uid0 = ["latitude": "56.835079", "longitude": "60.609401", "name":"Shepard"]
-        peoples.append(uid0)
-        let uid1 = ["latitude": "56.840197", "longitude": "60.611032", "name":"Garrus"]
-        peoples.append(uid1)
-        let uid2 = ["latitude": "56.825452", "longitude": "60.603478", "name":"Suzi"]
-        peoples.append(uid2)
-        let uid3 = ["latitude": "56.833107", "longitude": "60.591205", "name":"Liara"]
-        peoples.append(uid3)
-        
-        for mark in peoples {
-            if let name = mark["name"],
-                let latitudeString = mark["latitude"],
-                let longitudeString = mark["longitude"] {
-                    let mapAnnotation = MKPointAnnotation()
-                    mapAnnotation.title = name
-                guard let latitude = Double(latitudeString), let longitude = Double(longitudeString) else { return }
-                    mapAnnotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-                marks.append(mapAnnotation)
-            }
+        guard
+            let fileName = Bundle.main.url(forResource: "MapData", withExtension: "geojson"),
+            let mapPeoplesData = try? Data(contentsOf: fileName)
+        else {
+            print("no data")
+            return
+            
         }
-        mapView.addAnnotations(marks)
+        
+        do {
+            let features = try MKGeoJSONDecoder()
+                .decode(mapPeoplesData)
+                .compactMap {$0 as? MKGeoJSONFeature}
+            
+            let validWorks = features.compactMap(MapPeoples.init)
+            mapPeoples.append(contentsOf: validWorks)
+        } catch {
+            print("unexpected error: \(error)")
+        }
     }
     
+//Проверка доступа к службе геолокации
     func checkLocationEnabled() {
         if CLLocationManager.locationServicesEnabled() {
-            setupMapManager()
             checkAccessToGeolocation()
         } else {
             showAlertLocation(
@@ -125,17 +132,18 @@ class PeoplesOnMapViewController: UIViewController {
 
 extension PeoplesOnMapViewController: CLLocationManagerDelegate {
     
-        //MARK: - LOCATION MANAGER DELEGATE
-        
-        func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            if let location = locations.last?.coordinate {
-                let region = MKCoordinateRegion(center: location, latitudinalMeters: 3000, longitudinalMeters: 3000)
-                mapView.setRegion(region, animated: true)
-                
-            }
+    //MARK: - LOCATION MANAGER DELEGATE
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last?.coordinate {
+            let region = MKCoordinateRegion(center: location, latitudinalMeters: 2000, longitudinalMeters: 2000)
+            mapView.setRegion(region, animated: true)
+            
         }
-        
-        func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-            checkAccessToGeolocation()
-        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        checkAccessToGeolocation()
+    }
 }
+

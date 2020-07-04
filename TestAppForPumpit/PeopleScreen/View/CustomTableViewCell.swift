@@ -53,8 +53,8 @@ class CustomTableViewCell: UITableViewCell {
             batteryStatusLabel.textColor = .systemGreen
         } else if battery >= 0.25 && battery < 0.4 {
             batteryStatusImageView.image = UIImage(systemName: "battery.25")
-            batteryStatusImageView.tintColor = .systemRed
-            batteryStatusLabel.textColor = .systemRed
+            batteryStatusImageView.tintColor = .systemYellow
+            batteryStatusLabel.textColor = .systemYellow
         } else if battery < 0.25 && battery >= 0.05 {
             batteryStatusImageView.image = UIImage(systemName: "battery.25")
             batteryStatusImageView.tintColor = .systemRed
