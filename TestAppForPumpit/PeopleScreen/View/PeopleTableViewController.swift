@@ -22,7 +22,6 @@ class PeopleTableViewController: UITableViewController {
         tableView.tableFooterView = UIView() //delete lines in empty cells
         tableView.separatorInset = UIEdgeInsets.zero //full screen width separator
         
-        // Do any additional setup after loading the view.
     }
     
 //MARK: - Ref to database
@@ -47,8 +46,6 @@ class PeopleTableViewController: UITableViewController {
                     tempPeoples.append(peoplesDB)
                 }
             }
-//            print(tempPeoples)
-//            print(snapshot)
             self.peoples = tempPeoples
             self.tableView.reloadData()
         }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E43AAC5A61A1C6A9A2277F1 /* Pods_TestAppForPumpitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F335D3E6EF7515F06B5965C /* Pods_TestAppForPumpitTests.framework */; };
+		8432A34B24B1C0BD009B1F64 /* Ekaterinburg, Russia.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 8432A34A24B1C0BC009B1F64 /* Ekaterinburg, Russia.gpx */; };
 		844A4ED724AA115000411BC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A4ED624AA115000411BC2 /* AppDelegate.swift */; };
 		844A4ED924AA115000411BC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A4ED824AA115000411BC2 /* SceneDelegate.swift */; };
 		844A4EE024AA115700411BC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844A4EDF24AA115700411BC2 /* Assets.xcassets */; };
@@ -18,6 +19,9 @@
 		844A4F0224AA5AD900411BC2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 844A4F0124AA5AD900411BC2 /* GoogleService-Info.plist */; };
 		84740BC724AB5DE40098628D /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84740BC624AB5DE40098628D /* LocationService.swift */; };
 		84740BC924AB5F5E0098628D /* PeoplesOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84740BC824AB5F5E0098628D /* PeoplesOnMapViewController.swift */; };
+		847BC91624B0BEEA006DA6ED /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BC91524B0BEEA006DA6ED /* ProfileViewController.swift */; };
+		847BC91924B0C5E2006DA6ED /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BC91824B0C5E2006DA6ED /* NotificationsViewController.swift */; };
+		8480021424B22F0D003C5E36 /* HistoryPlacesOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480021324B22F0D003C5E36 /* HistoryPlacesOnMapViewController.swift */; };
 		84D2622B24ADA1250095EE30 /* MapPeoples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2622A24ADA1250095EE30 /* MapPeoples.swift */; };
 		84D2623224AE08A50095EE30 /* MapMarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D2623124AE08A50095EE30 /* MapMarkerAnnotationView.swift */; };
 		84D2623824AE4ADB0095EE30 /* MapData.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 84D2623724AE4ADB0095EE30 /* MapData.geojson */; };
@@ -43,6 +47,7 @@
 		2EF1692784978D979AE5263E /* Pods_TestAppForPumpit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestAppForPumpit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		349B9BE2B32BA78DB687144D /* Pods-TestAppForPumpit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAppForPumpit.debug.xcconfig"; path = "Target Support Files/Pods-TestAppForPumpit/Pods-TestAppForPumpit.debug.xcconfig"; sourceTree = "<group>"; };
 		591183066606567941B2B5A8 /* Pods-TestAppForPumpitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestAppForPumpitTests.debug.xcconfig"; path = "Target Support Files/Pods-TestAppForPumpitTests/Pods-TestAppForPumpitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8432A34A24B1C0BC009B1F64 /* Ekaterinburg, Russia.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Ekaterinburg, Russia.gpx"; sourceTree = "<group>"; };
 		844A4ED324AA115000411BC2 /* TestAppForPumpit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAppForPumpit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844A4ED624AA115000411BC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		844A4ED824AA115000411BC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +62,9 @@
 		844A4F0124AA5AD900411BC2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84740BC624AB5DE40098628D /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		84740BC824AB5F5E0098628D /* PeoplesOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeoplesOnMapViewController.swift; sourceTree = "<group>"; };
-		84740BCC24AB95810098628D /* Ekaterinburg, Russia.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Ekaterinburg, Russia.gpx"; sourceTree = "<group>"; };
+		847BC91524B0BEEA006DA6ED /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		847BC91824B0C5E2006DA6ED /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		8480021324B22F0D003C5E36 /* HistoryPlacesOnMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPlacesOnMapViewController.swift; sourceTree = "<group>"; };
 		84D2622A24ADA1250095EE30 /* MapPeoples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPeoples.swift; sourceTree = "<group>"; };
 		84D2623124AE08A50095EE30 /* MapMarkerAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkerAnnotationView.swift; sourceTree = "<group>"; };
 		84D2623724AE4ADB0095EE30 /* MapData.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MapData.geojson; sourceTree = "<group>"; };
@@ -126,12 +133,15 @@
 				84FA6FA124AB3E8600C82A6E /* Services */,
 				844A4EFA24AA2EE600411BC2 /* PeopleScreen */,
 				84740BCA24AB5F620098628D /* PeoplesOnMapScreen */,
+				847BC91A24B0C5E7006DA6ED /* NotificationsScreen */,
+				847BC91724B0C430006DA6ED /* ProfileScreen */,
+				8480021524B22F14003C5E36 /* HistoryPlacesOnMapScreen */,
 				84FA6F9B24AB104200C82A6E /* Main.storyboard */,
 				844A4EDF24AA115700411BC2 /* Assets.xcassets */,
 				844A4EE124AA115700411BC2 /* LaunchScreen.storyboard */,
 				844A4EE424AA115700411BC2 /* Info.plist */,
+				8432A34A24B1C0BC009B1F64 /* Ekaterinburg, Russia.gpx */,
 				844A4F0124AA5AD900411BC2 /* GoogleService-Info.plist */,
-				84740BCC24AB95810098628D /* Ekaterinburg, Russia.gpx */,
 				84D2623724AE4ADB0095EE30 /* MapData.geojson */,
 			);
 			path = TestAppForPumpit;
@@ -189,6 +199,30 @@
 				84D2623124AE08A50095EE30 /* MapMarkerAnnotationView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		847BC91724B0C430006DA6ED /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				847BC91524B0BEEA006DA6ED /* ProfileViewController.swift */,
+			);
+			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
+		847BC91A24B0C5E7006DA6ED /* NotificationsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				847BC91824B0C5E2006DA6ED /* NotificationsViewController.swift */,
+			);
+			path = NotificationsScreen;
+			sourceTree = "<group>";
+		};
+		8480021524B22F14003C5E36 /* HistoryPlacesOnMapScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8480021324B22F0D003C5E36 /* HistoryPlacesOnMapViewController.swift */,
+			);
+			path = HistoryPlacesOnMapScreen;
 			sourceTree = "<group>";
 		};
 		84D2622C24ADA3310095EE30 /* Model */ = {
@@ -304,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				844A4EE324AA115700411BC2 /* LaunchScreen.storyboard in Resources */,
+				8432A34B24B1C0BD009B1F64 /* Ekaterinburg, Russia.gpx in Resources */,
 				844A4F0224AA5AD900411BC2 /* GoogleService-Info.plist in Resources */,
 				84D2623824AE4ADB0095EE30 /* MapData.geojson in Resources */,
 				844A4EE024AA115700411BC2 /* Assets.xcassets in Resources */,
@@ -390,11 +425,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				84D2623224AE08A50095EE30 /* MapMarkerAnnotationView.swift in Sources */,
+				8480021424B22F0D003C5E36 /* HistoryPlacesOnMapViewController.swift in Sources */,
 				844A4ED724AA115000411BC2 /* AppDelegate.swift in Sources */,
 				84D2622B24ADA1250095EE30 /* MapPeoples.swift in Sources */,
+				847BC91924B0C5E2006DA6ED /* NotificationsViewController.swift in Sources */,
 				84FA6F9E24AB1BC800C82A6E /* PeopleTableViewController.swift in Sources */,
 				84740BC724AB5DE40098628D /* LocationService.swift in Sources */,
 				844A4EFD24AA306B00411BC2 /* CustomTableViewCell.swift in Sources */,
+				847BC91624B0BEEA006DA6ED /* ProfileViewController.swift in Sources */,
 				844A4EFF24AA559000411BC2 /* User.swift in Sources */,
 				84FA6F9A24AB05D600C82A6E /* Peoples.swift in Sources */,
 				84740BC924AB5F5E0098628D /* PeoplesOnMapViewController.swift in Sources */,
@@ -562,7 +600,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Gorokhovskiy.TestAppForPumpit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -581,7 +619,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Gorokhovskiy.TestAppForPumpit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

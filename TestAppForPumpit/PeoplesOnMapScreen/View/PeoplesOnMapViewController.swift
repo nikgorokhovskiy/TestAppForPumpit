@@ -13,7 +13,8 @@ class PeoplesOnMapViewController: UIViewController, MKMapViewDelegate {
 
 //MARK: - IBOutlets
     @IBOutlet weak var mapView: MKMapView!
-
+    @IBOutlet weak var chekingForUpdateView: UIView!
+    
     
 //MARK: - Properties
     private let locationManager = CLLocationManager()
@@ -27,17 +28,24 @@ class PeoplesOnMapViewController: UIViewController, MKMapViewDelegate {
         setupMapManager()
         
         mapView.register(MapMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-//        mapView.register(MapAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         loadInitialData()
         mapView.addAnnotations(mapPeoples)
         
-
+        
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         checkLocationEnabled()
+        if mapPeoples.count > 0 {
+            UIView.animate(withDuration: 1.5, delay: 2.5, options: [], animations: {
+                self.chekingForUpdateView.alpha = 0
+            }, completion: nil)
+        }
+        
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
