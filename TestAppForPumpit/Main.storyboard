@@ -98,7 +98,7 @@
                                     <outlet property="batteryStatusLabel" destination="bIJ-Vz-PhJ" id="Adf-jP-gXV"/>
                                     <outlet property="nameLabel" destination="BBk-Se-pc8" id="G1K-9e-Fxn"/>
                                     <outlet property="statusLabel" destination="Xi7-LV-9Pf" id="Xc1-Go-9BB"/>
-                                    <segue destination="grG-g0-vIV" kind="show" identifier="user_id" id="MKt-6T-uyp"/>
+                                    <segue destination="ftf-iu-taD" kind="show" id="KiA-Ka-9zR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -141,7 +141,11 @@
                         <viewLayoutGuide key="safeArea" id="ajA-s8-Hbs"/>
                     </view>
                     <navigationItem key="navigationItem" title="Name" id="NnE-lN-nez">
-                        <barButtonItem key="leftBarButtonItem" title="Назад" image="chevron.left" catalog="system" id="7SB-AX-tZi"/>
+                        <barButtonItem key="leftBarButtonItem" title="Назад" image="chevron.left" catalog="system" id="7SB-AX-tZi">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="ftf-iu-taD" id="dse-cc-7bl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="mYx-Hy-oSM" id="PtB-sY-Ttj"/>
@@ -149,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ET0-oq-oFM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3604" y="120"/>
+            <point key="canvasLocation" x="2652" y="120"/>
         </scene>
         <!--Люди на карте-->
         <scene sceneID="M7I-Gt-WLc">
@@ -714,25 +718,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i5T-ay-YxN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="857" y="2368"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="FYo-77-Eev">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="grG-g0-vIV" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="NnJ-PX-fMV"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mef-br-pjd">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ftf-iu-taD" kind="relationship" relationship="rootViewController" id="VSP-Zq-ibF"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7P7-gJ-kmk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2698.5507246376815" y="119.86607142857142"/>
         </scene>
     </scenes>
     <resources>

@@ -86,7 +86,10 @@ class HistoryPlacesOnMapViewController: UIViewController, MKMapViewDelegate {
     }
     
     
-
+    @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 
